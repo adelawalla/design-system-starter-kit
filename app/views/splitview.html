@@ -1,0 +1,206 @@
+<!--
+  This example leverages Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<!--
+  Using the grid to make a 2-column layout
+  https://www.lightningdesignsystem.com/components/utilities/grid/
+-->
+<div class="slds-tabs--default">
+  <ul class="slds-tabs--default__nav" role="tablist">
+    <li class="slds-tabs--default__item slds-text-heading--label slds-active" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Case One</a></li>
+    <li class="slds-tabs--default__item slds-text-heading--label" title="Item Two" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Case Two</a></li>
+    <li class="slds-tabs--default__item slds-text-heading--label" title="Item Three" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Case Three</a></li>
+    <li class="slds-tabs--default__item slds-text-heading--label" title="Item Three" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">Case Four</a></li>
+  </ul>
+  <div id="tab-default-1" class="slds-tabs--default__content slds-show slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-1__item">
+    <div class="slds-grid">
+      <!--
+        First column
+      -->
+      <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
+        <div class="slds-p-around--small">
+          <h2 class="slds-page-header__title">Single-line with long value first</h2>
+        </div>
+        <!-- <p class="slds-text-body--regular slds-m-vertical--large">Data shown in this table comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/app/views/data/splitview.json"><code>views/data/splitview.json</code></a>.</p> -->
+
+        <!--
+          Data table component
+          https://www.lightningdesignsystem.com/components/data-tables/
+
+          Modifier:
+          - fixed layout: slds-table--fixed-layout (to make text truncation work within cells)
+        -->
+        <table class="slds-table slds-table--bordered slds-table--fixed-layout">
+          <thead>
+            <tr class="slds-text-heading--label">
+              <th scope="col" class="slds-size--1-of-1">
+                <div class="slds-truncate" title="Account Name">Account Name</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--
+              Looping around values in Nunjucks
+              http://mozilla.github.io/nunjucks/templating.html#for
+            -->
+            {% for account in accounts %}
+            <tr>
+              <th scope="row">
+                <div class="slds-p-around--small">
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col single-line paragraph" data-label="Account Name">{{ account.name }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Billing State/Province">{{ account.state }}</div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="slds-col slds-size--5-of-6">
+        {% include "_page-header.html" %}
+      </div>
+    </div>
+  </div>
+  <div id="tab-default-2" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-2__item">
+    <div class="slds-grid">
+      <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
+        <div class="slds-p-around--small">
+          <h2 class="slds-page-header__title">Multi-line with long value first</h2>
+        </div>
+        <table class="slds-table slds-table--bordered slds-table--fixed-layout">
+          <thead>
+            <tr class="slds-text-heading--label">
+              <th scope="col" class="slds-size--1-of-1">
+                <div class="slds-truncate" title="Account Name">Account Name</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for account in accounts %}
+            <tr>
+              <th scope="row">
+                <div class="slds-p-around--small">
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col multi-line paragraph" data-label="Account Name">{{ account.name }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Billing State/Province">{{ account.state }}</div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="slds-col slds-size--5-of-6">
+        {% include "_page-header.html" %}
+      </div>
+    </div>
+  </div>
+  <div id="tab-default-3" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-3__item">
+    <div class="slds-grid">
+      <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
+        <div class="slds-p-around--small">
+          <h2 class="slds-page-header__title">Single-line with long value second</h2>
+        </div>
+        <table class="slds-table slds-table--bordered slds-table--fixed-layout">
+          <thead>
+            <tr class="slds-text-heading--label">
+              <th scope="col" class="slds-size--1-of-1">
+                <div class="slds-truncate" title="Account Name">Account Name</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for account in accounts %}
+            <tr>
+              <th scope="row">
+                <div class="slds-p-around--small">
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col single-line paragraph" data-label="Billing State/Province">{{ account.state }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Account Name">{{ account.name }}</div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="slds-col slds-size--5-of-6">
+        {% include "_page-header.html" %}
+      </div>
+    </div>
+  </div>
+  <div id="tab-default-4" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-4__item">
+    <div class="slds-grid">
+      <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
+        <div class="slds-p-around--small">
+          <h2 class="slds-page-header__title">Multi-line with long value second</h2>
+        </div>
+        <table class="slds-table slds-table--bordered slds-table--fixed-layout">
+          <thead>
+            <tr class="slds-text-heading--label">
+              <th scope="col" class="slds-size--1-of-1">
+                <div class="slds-truncate" title="Account Name">Account Name</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for account in accounts %}
+            <tr>
+              <th scope="row">
+                <div class="slds-p-around--small">
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col multi-line paragraph" data-label="Billing State/Province">{{ account.state }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Account Name">{{ account.name }}</div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-grid--align-spread">
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="slds-col slds-size--5-of-6">
+        {% include "_page-header.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">Salesforce Lightning Design System Starter Kit</a>.</footer>
+{% endblock %}

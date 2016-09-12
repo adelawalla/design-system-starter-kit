@@ -1,22 +1,16 @@
 //
 // Prototype styles (using the Sass CSS preprocessor)
 //
-
 //
 // First, we're importing the design system from the npm package
 //
 $static-font-path: '/assets/fonts/webfonts';
-@import 'node_modules/@salesforce-ux/design-system/scss/index';
-
-//
+@import 'node_modules/@salesforce-ux/design-system/scss/index'; //
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
-@import 'footer';
-
-//
+@import 'footer'; //
 // We can also add styles directly in this file, like so:
 //
-
 // Push down the global navigation below the header using a placeholder element
 .app-header-placeholder {
   // A note on Design Tokens in Sass:
@@ -28,7 +22,6 @@ $static-font-path: '/assets/fonts/webfonts';
   // This is how you leverage Design Tokens in Sass:
   height: $height-header;
 }
-
 // Wrap the prototype in a scrollable container
 .app-wrapper {
   overflow: auto;
@@ -38,4 +31,53 @@ $static-font-path: '/assets/fonts/webfonts';
   bottom: 0;
   right: 0;
   left: 0;
+}
+//Prototype Styles
+.single-line {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.multi-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 3.5rem;
+  overflow: hidden;
+  white-space: normal;
+}
+.paragraph {
+  margin-bottom: 0.25rem;
+  margin-right: $spacing-x-small;
+}
+.slds-grid:last-child .paragraph:last-child {
+  margin-bottom: 0;
+}
+.paragraph:last-child,
+.single-line:last-child {
+  margin-left: auto;
+  margin-right: 0;
+}
+.slds-panel--splitview {
+  border-right: $border-width-thin solid $color-border;
+  border-radius: 0;
+}
+.slds-theme--inverse {
+  .slds-table--fixed-layout thead {
+    background-color: $color-background-inverse;
+  }
+  .slds-table {
+    background-color: $color-background-inverse;
+  }
+  .slds-table:not(.slds-no-row-hover) tbody tr:hover > td,
+  .slds-table:not(.slds-no-row-hover) tbody tr:hover > th {
+    background-color: $color-background-alt-inverse;
+  }
+  .slds-text-color--weak{
+    color: $color-text-inverse-weak;
+  }
+  .slds-text-heading--label{
+    color: $color-text-inverse-weak;
+  }
 }
