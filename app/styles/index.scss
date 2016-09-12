@@ -73,6 +73,9 @@ $static-font-path: '/assets/fonts/webfonts';
   .slds-table {
     background-color: $color-background-alt-inverse;
   }
+  .slds-table thead th{
+    border-bottom: $border-width-thin solid $color-border-separator-inverse;
+  }
   .slds-table:not(.slds-no-row-hover) tbody tr:hover > td,
   .slds-table:not(.slds-no-row-hover) tbody tr:hover > th {
     background-color: $color-background-inverse;
