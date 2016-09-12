@@ -48,7 +48,7 @@ $static-font-path: '/assets/fonts/webfonts';
   white-space: normal;
 }
 .paragraph {
-  margin-bottom: 0.25rem;
+  margin-bottom: $spacing-xx-small;
   margin-right: $spacing-x-small;
 }
 .slds-grid:last-child .paragraph:last-child {
@@ -62,22 +62,44 @@ $static-font-path: '/assets/fonts/webfonts';
 .slds-panel--splitview {
   border-right: $border-width-thin solid $color-border;
   border-radius: 0;
+  .slds-page-header {
+    padding: $spacing-small;
+  }
 }
 .slds-theme--inverse {
   .slds-table--fixed-layout thead {
-    background-color: $color-background-inverse;
+    background-color: $color-background-alt-inverse;
   }
   .slds-table {
-    background-color: $color-background-inverse;
+    background-color: $color-background-alt-inverse;
   }
   .slds-table:not(.slds-no-row-hover) tbody tr:hover > td,
   .slds-table:not(.slds-no-row-hover) tbody tr:hover > th {
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-inverse;
   }
-  .slds-text-color--weak{
+  .slds-table--bordered tbody td,
+  .slds-table--bordered tbody th {
+    border-top: $border-width-thin solid $color-border-separator-inverse;
+  }
+  .slds-table--bordered {
+    border-top: $border-width-thin solid transparent;
+    border-bottom: $border-width-thin solid $color-border-separator-inverse;
+  }
+  .slds-text-color--weak {
     color: $color-text-inverse-weak;
   }
-  .slds-text-heading--label{
+  .slds-text-heading--label {
     color: $color-text-inverse-weak;
   }
+  .slds-page-header {
+    border-bottom: $border-width-thin solid $color-border-separator-inverse;
+    background: $color-background-alt-inverse;
+  }
+  .slds-type-focus {
+    color: $color-text-inverse;
+  }
+}
+
+.slds-table tbody th {
+  padding: 0;
 }

@@ -33,8 +33,54 @@
         First column
       -->
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
-        <div class="slds-p-around--small">
-          <h2 class="slds-page-header__title">Single-line with long value first</h2>
+        <div class="slds-page-header slds-page-header--object-home" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+            </svg>
+          </span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-title--caps slds-line-height--reset slds-assistive-text">Leads</p>
+                  <button class="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+                    <div class="slds-grid slds-grid--vertical-align-center slds-truncate">
+                      <h1 class="slds-page-header__title slds-truncate" title="this should match My Leads">Single-line long first</h1>
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right slds-no-flex">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+              <!-- <div class="slds-button-group" role="group">
+                <button class="slds-button slds-button--icon-border-inverse" aria-haspopup="true">
+                  <svg aria-hidden="true" class="slds-button__icon">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+              <p class="slds-text-body--small slds-text-color--weak">10 items • Sorted by Name</p>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+              <button class="slds-button slds-m-left--xx-small slds-button--icon-border slds-button--icon-small">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                </svg>
+                <span class="slds-assistive-text">Refresh</span>
+              </button>
+            </div>
+          </div>
         </div>
         <!-- <p class="slds-text-body--regular slds-m-vertical--large">Data shown in this table comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/app/views/data/splitview.json"><code>views/data/splitview.json</code></a>.</p> -->
 
@@ -45,7 +91,7 @@
           Modifier:
           - fixed layout: slds-table--fixed-layout (to make text truncation work within cells)
         -->
-        <table class="slds-table slds-table--bordered slds-table--fixed-layout">
+        <table class="slds-table slds-table--bordered2 slds-table--fixed-layout">
           <thead>
             <tr class="slds-text-heading--label">
               <th scope="col" class="slds-size--1-of-1">
@@ -61,7 +107,7 @@
             {% for account in accounts %}
             <tr>
               <th scope="row">
-                <div class="slds-p-around--small">
+                <div class="slds-p-around--x-small">
                   <div class="slds-grid slds-wrap slds-grid--align-spread">
                     <div class="slds-col single-line paragraph" data-label="Account Name">{{ account.name }}</div>
                     <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Billing State/Province">{{ account.state }}</div>
@@ -82,11 +128,60 @@
       </div>
     </div>
   </div>
+
+
+
   <div id="tab-default-2" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-2__item">
     <div class="slds-grid">
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
-        <div class="slds-p-around--small">
-          <h2 class="slds-page-header__title">Multi-line with long value first</h2>
+        <div class="slds-page-header slds-page-header--object-home" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+            </svg>
+          </span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-title--caps slds-line-height--reset slds-assistive-text">Leads</p>
+                  <button class="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+                    <div class="slds-grid slds-grid--vertical-align-center slds-truncate">
+                      <h1 class="slds-page-header__title slds-truncate" title="this should match My Leads">Multi-line long first</h1>
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right slds-no-flex">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+              <!-- <div class="slds-button-group" role="group">
+                <button class="slds-button slds-button--icon-border-inverse" aria-haspopup="true">
+                  <svg aria-hidden="true" class="slds-button__icon">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+              <p class="slds-text-body--small slds-text-color--weak">10 items • Sorted by Name</p>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+              <button class="slds-button slds-m-left--xx-small slds-button--icon-border slds-button--icon-small">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                </svg>
+                <span class="slds-assistive-text">Refresh</span>
+              </button>
+            </div>
+          </div>
         </div>
         <table class="slds-table slds-table--bordered slds-table--fixed-layout">
           <thead>
@@ -121,11 +216,59 @@
       </div>
     </div>
   </div>
+
+
   <div id="tab-default-3" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-3__item">
     <div class="slds-grid">
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
-        <div class="slds-p-around--small">
-          <h2 class="slds-page-header__title">Single-line with long value second</h2>
+        <div class="slds-page-header slds-page-header--object-home" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+            </svg>
+          </span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-title--caps slds-line-height--reset slds-assistive-text">Leads</p>
+                  <button class="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+                    <div class="slds-grid slds-grid--vertical-align-center slds-truncate">
+                      <h1 class="slds-page-header__title slds-truncate" title="this should match My Leads">Single-line long second</h1>
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right slds-no-flex">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+              <!-- <div class="slds-button-group" role="group">
+                <button class="slds-button slds-button--icon-border-inverse" aria-haspopup="true">
+                  <svg aria-hidden="true" class="slds-button__icon">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+              <p class="slds-text-body--small slds-text-color--weak">10 items • Sorted by Name</p>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+              <button class="slds-button slds-m-left--xx-small slds-button--icon-border slds-button--icon-small">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                </svg>
+                <span class="slds-assistive-text">Refresh</span>
+              </button>
+            </div>
+          </div>
         </div>
         <table class="slds-table slds-table--bordered slds-table--fixed-layout">
           <thead>
@@ -160,11 +303,59 @@
       </div>
     </div>
   </div>
+
+
   <div id="tab-default-4" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-4__item">
     <div class="slds-grid">
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
-        <div class="slds-p-around--small">
-          <h2 class="slds-page-header__title">Multi-line with long value second</h2>
+        <div class="slds-page-header slds-page-header--object-home" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+            </svg>
+          </span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-title--caps slds-line-height--reset slds-assistive-text">Leads</p>
+                  <button class="slds-button slds-type-focus slds-m-right--small slds-grid slds-truncate" aria-haspopup="true">
+                    <div class="slds-grid slds-grid--vertical-align-center slds-truncate">
+                      <h1 class="slds-page-header__title slds-truncate" title="this should match My Leads">Multi-line long second</h1>
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right slds-no-flex">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+              <!-- <div class="slds-button-group" role="group">
+                <button class="slds-button slds-button--icon-border-inverse" aria-haspopup="true">
+                  <svg aria-hidden="true" class="slds-button__icon">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+              <p class="slds-text-body--small slds-text-color--weak">10 items • Sorted by Name</p>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+              <button class="slds-button slds-m-left--xx-small slds-button--icon-border slds-button--icon-small">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                </svg>
+                <span class="slds-assistive-text">Refresh</span>
+              </button>
+            </div>
+          </div>
         </div>
         <table class="slds-table slds-table--bordered slds-table--fixed-layout">
           <thead>
