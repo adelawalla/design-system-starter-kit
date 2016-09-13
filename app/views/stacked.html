@@ -20,8 +20,8 @@
   Using the grid to make a 2-column layout
   https://www.lightningdesignsystem.com/components/utilities/grid/
 -->
-<div class="slds-tabs--default">
-  <ul class="slds-tabs--default__nav" role="tablist">
+<div class="slds-tabs--default slds-text-body--small">
+  <ul class="slds-tabs--default__nav slds-p-left--x-small" role="tablist">
     <li class="slds-tabs--default__item slds-text-heading--label slds-active" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Case One</a></li>
     <li class="slds-tabs--default__item slds-text-heading--label" title="Item Two" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Case Two</a></li>
     <li class="slds-tabs--default__item slds-text-heading--label" title="Item Three" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Case Three</a></li>
@@ -32,6 +32,13 @@
       <!--
         First column
       -->
+      <div class="slds-col slds-grid slds-panel--button slds-theme--inverse">
+        <button class="slds-button slds-button--icon-xx-small slds-stretch slds-button--icon-border">
+          <svg aria-hidden="true" class="slds-button__icon slds-no-flex">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+          </svg>
+        </button>
+      </div>
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
         <div class="slds-page-header slds-page-header--object-home" role="banner">
           <div class="slds-grid">
@@ -107,12 +114,12 @@
             {% for account in accounts %}
             <tr>
               <th scope="row">
-                <div class="slds-p-around--x-small">
+                <div class="slds-p-around--small">
                     <div class="slds-col single-line paragraph" data-label="Account Name">{{ account.name }}</div>
                     <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Billing State/Province">{{ account.state }}</div>
 
                     <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
-                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Tweet">{{ account.tweet }}</div>
                 </div>
               </th>
             </tr>
@@ -130,6 +137,13 @@
 
   <div id="tab-default-2" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-2__item">
     <div class="slds-grid">
+      <div class="slds-col slds-grid slds-panel--button slds-theme--inverse">
+        <button class="slds-button slds-button--icon-xx-small slds-stretch slds-button--icon-border">
+          <svg aria-hidden="true" class="slds-button__icon slds-no-flex">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+          </svg>
+        </button>
+      </div>
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
         <div class="slds-page-header slds-page-header--object-home" role="banner">
           <div class="slds-grid">
@@ -192,12 +206,12 @@
             {% for account in accounts %}
             <tr>
               <th scope="row">
-                <div class="slds-p-around--x-small">
+                <div class="slds-p-around--small">
                     <div class="slds-col multi-line paragraph" data-label="Account Name">{{ account.name }}</div>
                     <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Billing State/Province">{{ account.state }}</div>
 
                     <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
-                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Tweet">{{ account.tweet }}</div>
                 </div>
               </th>
             </tr>
@@ -214,6 +228,13 @@
 
   <div id="tab-default-3" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-3__item">
     <div class="slds-grid">
+      <div class="slds-col slds-grid slds-panel--button slds-theme--inverse">
+        <button class="slds-button slds-button--icon-xx-small slds-stretch slds-button--icon-border">
+          <svg aria-hidden="true" class="slds-button__icon slds-no-flex">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+          </svg>
+        </button>
+      </div>
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
         <div class="slds-page-header slds-page-header--object-home" role="banner">
           <div class="slds-grid">
@@ -276,11 +297,11 @@
             {% for account in accounts %}
             <tr>
               <th scope="row">
-                <div class="slds-p-around--x-small">
+                <div class="slds-p-around--small">
                     <div class="slds-col single-line paragraph" data-label="Billing State/Province">{{ account.state }}</div>
                     <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Account Name">{{ account.name }}</div>
 
-                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Tweet">{{ account.tweet }}</div>
                     <div class="slds-col single-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
 
                 </div>
@@ -299,6 +320,13 @@
 
   <div id="tab-default-4" class="slds-tabs--default__content slds-hide slds-p-top--none" role="tabpanel" aria-labelledby="tab-default-4__item">
     <div class="slds-grid">
+      <div class="slds-col slds-grid slds-panel--button slds-theme--inverse">
+        <button class="slds-button slds-button--icon-xx-small slds-stretch slds-button--icon-border">
+          <svg aria-hidden="true" class="slds-button__icon slds-no-flex">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+          </svg>
+        </button>
+      </div>
       <div class="slds-col slds-size--1-of-6 slds-panel--splitview slds-theme--inverse">
         <div class="slds-page-header slds-page-header--object-home" role="banner">
           <div class="slds-grid">
@@ -361,11 +389,11 @@
             {% for account in accounts %}
             <tr>
               <th scope="row">
-                <div class="slds-p-around--x-small">
+                <div class="slds-p-around--small">
                     <div class="slds-col multi-line paragraph" data-label="Billing State/Province">{{ account.state }}</div>
                     <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Account Name">{{ account.name }}</div>
 
-                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Type">{{ account.type }}</div>
+                    <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Tweet">{{ account.tweet }}</div>
                     <div class="slds-col multi-line paragraph slds-text-color--weak" data-label="Phone">{{ account.phone }}</div>
                 </div>
               </th>

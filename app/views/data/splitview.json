@@ -5,73 +5,85 @@
       "name": "Burlington Textiles Corp of America",
       "state": "NC",
       "phone": "(336) 222-7000",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "Expect heavy ridership as we serve #SFGiants & #49ers this afternoon. Go Niners & Giants! We added post-game service for both events."
     },
     {
       "name": "Dickenson plc",
       "state": "KS",
       "phone": "(785) 241-6200",
-      "type": "Customer - Channel"
+      "type": "Customer - Channel",
+      "tweet": "'We should all strive to kill best practices.' http://bit.ly/2bWqrSa  by @ustinknight"
     },
     {
       "name": "Edge Communications",
       "state": "TX",
       "phone": "(512) 757-6000",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "“Solidarity with Standing Rock” by @RheaSuh"
     },
     {
       "name": "Express Logistics and Transport",
       "state": "OR",
       "phone": "(503) 421-7800",
-      "type": "Customer - Channel"
+      "type": "Customer - Channel",
+      "tweet": "“Design products people actually want to use.” http://bit.ly/2bL1ECV  by @kayleighkarutis"
     },
     {
       "name": "GenePoint",
       "state": "CA",
       "phone": "(650) 867-3450",
-      "type": "Customer - Channel"
+      "type": "Customer - Channel",
+      "tweet": "'Failure is educational, but it stings when it happens before an audience.' http://bit.ly/2cba8Ta  by @alecsandru"
     },
     {
       "name": "Grand Hotels & Resorts Ltd",
       "state": "IL",
       "phone": "(312) 596-1000",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "“The cleaner your kitchen is, the better your product will be.” http://bit.ly/2clr9cM  by @uxpowertools"
     },
     {
       "name": "Pyramid Construction Inc.",
       "state": "",
       "phone": "(014) 427-4427",
-      "type": "Customer - Channel"
+      "type": "Customer - Channel",
+      "tweet": "Experts, not generalists, create the websites, apps, and hardware that win widespread praise http://bit.ly/2bL2fnO "
     },
     {
       "name": "sForce",
       "state": "CA",
       "phone": "(415) 901-7000",
-      "type": ""
+      "type": "",
+      "tweet": "“A mistake is just a moment in time” by @jasonfried"
     },
     {
       "name": "United Oil & Gas Corp.",
       "state": "NY",
       "phone": "(212) 842-5500",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "Don't miss your chance to see #DESIGNDISRUPTORS at @denstartupweek tomorrow! Sign up here: http://bit.ly/2cEfeHW "
     },
     {
       "name": "United Oil & Gas, Singapore",
       "state": "Singapore",
       "phone": "(650) 450-8810",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "“heart, like all of the things listed below, for future reference” by @JoelakaMaG"
     },
     {
       "name": "United Oil & Gas, UK",
       "state": "UK",
       "phone": "+44 191 4956203",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "“We need to consider the range of experiences people go through when using our products.” http://bit.ly/2bWoJjG "
     },
     {
       "name": "University of Arizona",
       "state": "AZ",
       "phone": "(520) 773-9050",
-      "type": "Customer - Direct"
+      "type": "Customer - Direct",
+      "tweet": "Employees aren’t often driven by the same intrinsic interest that the leader has for their business’s profitability."
     }
   ]
 }

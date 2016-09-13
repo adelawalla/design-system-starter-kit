@@ -66,6 +66,16 @@ $static-font-path: '/assets/fonts/webfonts';
     padding: $spacing-small;
   }
 }
+ .slds-panel--button {
+   .slds-button {
+     width: .75rem;
+     height: 100%;
+     border-radius: 0;
+   }
+   .slds-button--icon-border, .slds-button--icon-border-filled {
+    border: 0px solid #d8dde6;
+  }
+ }
 .slds-theme--inverse {
   .slds-table--fixed-layout thead {
     background-color: $color-background-alt-inverse;
