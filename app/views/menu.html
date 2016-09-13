@@ -1,0 +1,162 @@
+<!--
+  This example leverages Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<!--
+  Using the grid to make a 2-column layout
+  https://www.lightningdesignsystem.com/components/utilities/grid/
+-->
+<div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aria-expanded="true">
+  <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
+    <svg aria-hidden="true" class="slds-button__icon">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+    </svg>
+    <span class="slds-assistive-text">Show More</span>
+  </button>
+  <div aria-labelledby="title_1162:0" tabindex="-1" role="dialog" class="listViewPickerPanel uiPanel--default uiPanel positioned south open active slds-dropdown slds-dropdown--left" data-aura-class="uiPanel--default uiPanel" data-aura-rendered-by="1164:0"
+      id="1164:0" aria-hidden="false">
+    <div class="container" data-aura-rendered-by="1165:0"><span class="slds-assistive-text" data-aura-rendered-by="1166:0">Select List View</span>
+      <!--render facet: 1168:0-->
+      <div class="panel-content scrollable" data-aura-rendered-by="1169:0" data-scoped-scroll="true" style="padding: 0px;">
+        <div class="slds-form-element slds-lookup hideInput forceVirtualAutocompleteMenu" data-aura-rendered-by="965:0" data-aura-class="forceVirtualAutocompleteMenu">
+          <span class="icon-fallback-text autocompleteInputSearchIcon forceIcon" aria-hidden="true" data-icon="" data-key="search" data-aura-rendered-by="969:0" data-aura-class="forceIcon">
+            <span class="icon icon-key" data-aura-rendered-by="970:0"></span>
+          </span>
+          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="971:0" data-aura-class="forceIcon"></span>
+          <div data-aura-rendered-by="1068:0" class="uiInput uiAutocomplete uiInput--default uiInput--picklist" data-aura-class="uiInput uiAutocomplete uiInput--default uiInput--picklist">
+            <input class="slds-input default input uiInput uiInputTextForAutocomplete uiInput--default uiInput--input" role="combobox" id="973:0" aria-expanded="true" aria-autocomplete="list" type="text" aria-describedby="" aria-haspopup="true" placeholder="Search lists..."
+                aria-activedescendant="1004:0_listviewpicker_2" data-aura-rendered-by="1051:0" data-aura-class="uiInput uiInputTextForAutocomplete uiInput--default uiInput--input" data-interactive-lib-uid="5">
+            <!--render facet: 1052:0-->
+            <!--render facet: 1055:0-->
+            <div class="list uiAbstractList forceVirtualAutocompleteMenuList" role="menu" data-aura-rendered-by="1033:0" data-aura-class="uiAbstractList forceVirtualAutocompleteMenuList">
+              <!--render facet: 1034:0-->
+              <div class="listContent" data-aura-rendered-by="1035:0">
+                <!--render facet: 1027:0-->
+                <div style="" data-aura-rendered-by="1029:0" class="uiScroller scroller-wrapper scroll-bidirectional native" data-aura-class="uiScroller" data-scoped-scroll="true">
+                  <div data-aura-rendered-by="1030:0" class="scroller">
+                    <ul class="slds-dropdown__list  slds-show" role="presentation" data-aura-rendered-by="1001:0">
+                      <li class="slds-dropdown__item has-icon--left   forceVirtualAutocompleteMenuOption" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+                        <div class="slds-dropdown__header slds-text-heading--label " data-aura-rendered-by="1007:0">List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1009:0">Recent List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label slds-has-divider--top-space  slds-hide" data-aura-rendered-by="1011:0">All Other Lists</div>
+                        <a data-refid="filter" tabindex="-1" id="1004:0_listviewpicker_0" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="00BR0000000W5DOMA0" role="menuitem">
+                          <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+                            <span class="icon icon-key" data-aura-rendered-by="1018:0">
+                            </span>
+                          </span>
+                          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+                          <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">All Open Leads</span>
+                        </a>
+                      </li>
+                      <li class="slds-dropdown__item has-icon--left   forceVirtualAutocompleteMenuOption" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1007:0">List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1009:0">Recent List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label slds-has-divider--top-space  slds-hide" data-aura-rendered-by="1011:0">All Other Lists</div>
+                        <a data-refid="filter" tabindex="-1" id="1004:0_listviewpicker_1" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="00BR0000000W5DNMA0" role="menuitem">
+                          <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+                            <span class="icon icon-key" data-aura-rendered-by="1018:0"></span>
+                          </span>
+                          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+                          <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">My Unread Leads</span>
+                        </a>
+                      </li>
+                      <li class="slds-dropdown__item has-icon--left   highlighted slds-is-selected forceVirtualAutocompleteMenuOption" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1007:0">List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1009:0">Recent List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label slds-has-divider--top-space  slds-hide" data-aura-rendered-by="1011:0">All Other Lists</div>
+                        <a data-refid="filter" tabindex="-1" id="1004:0_listviewpicker_2" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="Recent" role="menuitem">
+                          <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+                          <span class="icon icon-key" data-aura-rendered-by="1018:0"></span>
+                          </span>
+                          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+                          <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">Recently Viewed</span>
+                        </a>
+                      </li>
+                      <li class="slds-dropdown__item has-icon--left   forceVirtualAutocompleteMenuOption" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1007:0">List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1009:0">Recent List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label slds-has-divider--top-space  slds-hide" data-aura-rendered-by="1011:0">All Other Lists</div>
+                        <a data-refid="filter" tabindex="-1" id="1004:0_listviewpicker_3" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="00BR0000000W5DMMA0" role="menuitem">
+                          <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+                          <span class="icon icon-key" data-aura-rendered-by="1018:0"></span>
+                          </span>
+                          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+                          <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">Recently Viewed Leads</span>
+                        </a>
+                      </li>
+                      <li class="slds-dropdown__item has-icon--left   forceVirtualAutocompleteMenuOption" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1007:0">List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label  slds-hide" data-aura-rendered-by="1009:0">Recent List Views</div>
+                        <div class="slds-dropdown__header slds-text-heading--label slds-has-divider--top-space  slds-hide" data-aura-rendered-by="1011:0">All Other Lists</div>
+                        <a data-refid="filter" tabindex="-1" id="1004:0_listviewpicker_4" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="00BR0000000W5DLMA0" role="menuitem">
+                          <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+                          <span class="icon icon-key" data-aura-rendered-by="1018:0"></span>
+                          </span>
+                          <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+                          <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">Today's Leads</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="infinite-loading"><span class="il"></span></div>
+                  </div>
+                </div>
+                <div class="emptyListContent" data-aura-rendered-by="1037:0">No results found.</div>
+                <div class="loadingIndicator" data-aura-rendered-by="1039:0">
+                  <div class="indicator forceInlineSpinner" aria-hidden="false" role="alert" data-aura-rendered-by="982:0" data-aura-class="forceInlineSpinner">
+                    <div data-aura-rendered-by="988:0" class="forceDotsSpinner" data-aura-class="forceDotsSpinner">
+                      <div class="dotsSpinner" data-aura-rendered-by="989:0">
+                        <div class="dots" data-aura-rendered-by="990:0">
+                          <div class="a" data-aura-rendered-by="991:0"></div>
+                          <div class="b" data-aura-rendered-by="992:0"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--render facet: 997:0-->
+                  </div>
+                </div>
+              </div>
+              <!--render facet: 1042:0-->
+            </div>
+            <label class="uiLabel-hidden form-element__label uiLabel" for="973:0" data-aura-rendered-by="1063:0" data-aura-class="uiLabel"><span class="slds-assistive-text" data-aura-rendered-by="1064:0"></span>
+              <!--render facet: 1066:0-->
+              <!--render facet: 1067:0-->
+            </label>
+          </div>
+          <!--render facet: 1060:0-->
+        </div>
+      </div>
+      <div class="panel-footer" data-aura-rendered-by="1171:0">
+        <!--render facet: 1172:0-->
+        <ul class="slds-dropdown__list  slds-show" role="presentation" data-aura-rendered-by="1001:0">
+          <li class="slds-dropdown__item has-icon--left forceVirtualAutocompleteMenuOption slds-has-divider--top-space" role="presentation" data-aura-rendered-by="1006:0" data-aura-class="forceVirtualAutocompleteMenuOption">
+            <a data-refid="filter" tabindex="0" id="1004:0_listviewpicker_5" href="javascript:void(0);" data-aura-rendered-by="1013:0" data-filter="00BR0000000W5DLMA0">
+              <!--role="menuitem"-->
+              <span class="icon-fallback-text slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--small forceIcon" aria-hidden="true" data-icon="" data-key="check" data-aura-rendered-by="1017:0" data-aura-class="forceIcon">
+              <span class="icon icon-key" data-aura-rendered-by="1018:0"></span>
+              </span>
+              <span class="slds-assistive-text forceIcon" data-aura-rendered-by="1019:0" data-aura-class="forceIcon">Selected</span>
+              <span class=" listViewPickerOption" data-aura-rendered-by="1021:0">Favorite this Page</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--render facet: 1173:0-->
+</div>
+
+{% endblock %}

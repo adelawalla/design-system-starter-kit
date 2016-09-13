@@ -116,3 +116,11 @@ $static-font-path: '/assets/fonts/webfonts';
 .slds-table tbody th {
   padding: 0;
 }
+
+//-------------
+//menu proto
+
+.emptyListContent,
+.hideInput input {
+  display: none;
+}
